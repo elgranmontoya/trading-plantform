@@ -1,17 +1,17 @@
 function gloalDOHLCV(DataSet)
-    global date;
-    global open;
-    global high;
-    global low;
-    global close;
-    global volume;
-    global price;
-    date = DataSet(end,1);
-    open = DataSet(end,2);
-    high = DataSet(end,3);
-    low =  DataSet(end,4);
-    close = DataSet(end,5);
-    price = DataSet(end,5);
-    volume = DataSet(end,6);
+    global d;
+    global o;
+    global h;
+    global l;
+    global c;
+    global v;
+    global p;
+    d = DataSet(end,1);
+    o = DataSet(end,2);
+    h = DataSet(end,3);
+    l =  DataSet(end,4);
+    c = DataSet(end,5);
+    p = DataSet(end,5);
+    v = DataSet(end,6);
 end
 

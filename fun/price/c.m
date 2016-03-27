@@ -1,6 +1,7 @@
-function [ close ] = closes( Number )
-	
-	global DataSet;    
+function [ close ] = c( Number )
+%UNTITLED Summary of this function goes here
+%   Detailed explanation goes here
+    global DataSet;    
 	[t,n] = size(DataSet);
 	
 	if n < 3
@@ -19,7 +20,6 @@ function [ close ] = closes( Number )
 	
 		close = DataSet(end - Number,5);
 	end
-
 
 end
 

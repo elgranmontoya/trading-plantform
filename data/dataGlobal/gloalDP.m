@@ -1,8 +1,8 @@
 function  gloalDP( DataSet )
-    global price;
-    global date;
-    price = DataSet(end,2);
-    date = DataSet(end,1);
+    global p;
+    global d;
+    p = DataSet(end,2);
+    d = DataSet(end,1);
 
 end
 

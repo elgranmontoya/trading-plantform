@@ -5,7 +5,7 @@ function [ close ] = closes( Number )
 	
 	if n < 3
 	
-		disp('Error: The data type is not correct for closing function');
+		disp('Error: The data type is not correct for closing price funct');
 	
 	elseif t < Number
 

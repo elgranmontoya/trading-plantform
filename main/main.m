@@ -7,6 +7,7 @@ addpath('../data/dataReader');
 addpath('../data/dataGlobal');
 % function path
 addpath('../fun/tradeFun');
+addpath('../fun/price');
 % plot path
 addpath('../plot');
 
@@ -15,11 +16,12 @@ addpath('../plot');
 %% initial global parameter
 global DataSet;
 DataSet = [];
-global price;
-global date;
-global open;
-global high;
-global low;
+global c;
+global p;
+global d;
+global o;
+global h;
+global l;
 
 
 
@@ -40,7 +42,7 @@ OutPut  = dataFeed(SymbolName, dataType,rowData,period,type);
 [Ntime] =size(OutPut,1);	
 BeginTime = 3;
 EndTime = Ntime;
-h=figure
+f=figure
 xlabel('Date');
 ylabel('Price');
 title('xxx Stock');
@@ -66,10 +68,12 @@ for I_time =1 : EndTime
     %% run history time data
     DataSet = [DataSet; table2array(OutPut(I_time,:))];
 
-    
+    %% set up the global data for date, open , high , low , close , volume
+    globalData( dataType,DataSet );
+
     %% Run MainPlot.m for plotting 
-    axis auto
-    run('MainPicture');
+   % axis auto
+   % run('MainPicture');
         
 		
 	% renew the time 
